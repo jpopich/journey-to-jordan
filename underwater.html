@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title> Adventure Story </title>
+        <link rel="icon" href="assets/rune.png" />
+        <link href="styles/styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@1,100&family=Redressed&display=swap" rel="stylesheet">
+    </head>
+    <body id="content">
+        <h1 id="heading" class="center text-white ancient-font text-blue"> Underwater </h1>
+        <hr>
+        <p class="center">
+           <img id="picture" src="assets/underwater.gif" width="720"> 
+        </p>
+        <p class="center text-white clean-font text-blue"> While underwater, you see three caverns. A red, blue, and black cavern. </p>
+        <h3 class="center text-white clean-font text-blue"> Do you want to go into a cavern, or back above water? </h3>
+
+        <!--Buttons-->
+        <div class="center">
+            <a id="redCave" href="red-cave.html"> <button> Red </button> </a>
+        </div>
+
+        <div class="center">
+            <a id="blueCave" href="blue-cave.html"> <button> Blue </button> </a>
+        </div>
+
+        <div class="center">
+            <a href="#" onclick="drown()"> <button> Black </button> </a>
+        </div>
+
+        <div class="center">
+            <a id="exit" href="spring.html"> <button> Exit </button> </a>
+        </div>
+        
+        <hr>
+
+        <div class="center">
+            <iframe src="pouch.html" id="pouch" height="101" width="62"> </iframe>
+        </div>
+
+        <script> //Script BEGINS
+            pouch.src += location.search;
+            redCave.href += location.search;
+            blueCave.href += location.search;
+            exit.href += location.search;
+
+
+            function drown(){                             
+                document.body.innerHTML = (
+                    `<h1 class="center text-white ancient-font text-red">You Drowned!</h1>  
+                    <hr>
+
+                    <p class="center">
+                    <img src="assets/drown.gif" width="720">
+                    </p>                    
+                    
+                    <h3 class="center text-white clean-font text-red"> You went into the deepest cavern and couldn't make it out. </h3>
+
+                    <div class="center">
+                        <a href="index.html"> <button> Game Over </button> </a>
+                    </div>
+
+                    <hr>
+
+                    <audio autoplay>
+                        <source src="assets/bubbling.mp3">
+                    </audio>`
+                );                                      
+            }
+        </script> <!--Script ENDS-->
+    </body>
+</html>
+
+<!--If black cavern button is chosen, 3 things happen: 
+    picture changes to skull in water, 
+    message changes to death message, 
+    and all buttons change to start over-->

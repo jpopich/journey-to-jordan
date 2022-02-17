@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title> Adventure Story </title>
+        <link rel="icon" href="assets/rune.png" />
+        <link href="styles/styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@1,100&family=Redressed&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class="center text-white ancient-font text-green"> Jungle </h1>
+
+        <hr>
+
+        <p class="center">
+        <img src="assets/jungle.gif" width="700">
+        </p>
+
+        <p class="center text-white clean-font text-green"> While in search for others, you stumble upon a fork in the road. </p>
+        <h3 class="center text-white clean-font text-green">Which path will you take?</h3>
+
+        <div class="center">
+            <a id="spring" href="spring.html"> <button> Spring </button> </a>
+        </div>
+
+        <div class="center">
+            <a id="temple" href="temple.html"> <button> Temple </button> </a>
+        </div>
+        
+        <hr>
+        <div class="center">
+            <iframe src="pouch.html" id="pouch" height="101" width="62" > </iframe>
+        </div>
+        <script>
+            pouch.src += location.search;
+            spring.href += location.search;
+            temple.href += location.search;
+        </script>
+    </body>
+</html>

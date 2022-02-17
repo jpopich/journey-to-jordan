@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link href="styles/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <scan class="text-white"> Pouch:  </scan><hr>
+        <table>
+            <tr>
+                <td> &#9804 </td> <!--blue rune ♌-->
+                <td> &#127540 </td> <!--red rune 🈴 -->
+            </tr>
+            <tr>
+                <td id="blueRune" class="text-white">0</td>
+                <td id="redRune" class="text-white">0</td>
+            </tr>
+        </table>
+        <script>
+            var queryString = new URLSearchParams(location.search);
+            blueRune.innerText = queryString.get("blueRune")
+            redRune.innerText = queryString.get("redRune")
+        </script>
+    </body>
+</html>

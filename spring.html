@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title> Adventure Story </title>
+        <link rel="icon" href="assets/rune.png" />
+        <link href="styles/styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@1,100&family=Redressed&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class="center text-white ancient-font text-blue"> Spring </h1>
+        <hr>
+        <p class="center ">
+            <img src="assets/spring.gif" width="720">
+        </p>
+        <p class="center text-white clean-font text-blue"> The water is crystal clear. </p>
+        <h3 class="center text-white clean-font text-blue"> What is your decision? </h3>
+
+        <!--Buttons-->
+        <div class="center">
+                <a id="underwater" href="underwater.html"> <button> Swim </button> </a> 
+        </div>
+
+        <div class="center">
+            <a id="cliff" href="cliff.html"> <button> Continue on Your Path </button> </a>
+        </div>
+
+        <div class="center">
+            <a id="exit" href="jungle.html"> <button> Exit </button> </a>
+        </div>
+
+
+        <hr>
+        <div class="center">
+            <iframe src="pouch.html" id="pouch" height="101" width="62"> </iframe>
+        </div>
+        <script>
+            pouch.src += location.search;
+            underwater.href += location.search;
+            cliff.href += location.search;
+            exit.href += location.search;
+        </script>
+    </body>
+</html>

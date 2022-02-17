@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title> Adventure Story </title>
+        <link rel="icon" href="assets/rune.png" />
+        <link href="styles/styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@1,100&family=Redressed&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class="center text-white ancient-font text-yellow"> Cliff </h1>
+        <hr>
+
+        <p class="center">
+            <img src="assets/cliff.gif" width="720">
+        </p>
+        
+        <p class="center text-white clean-font text-yellow"> You've found yourself at the top of a cliff </p>
+        <h4 class="center text-white clean-font text-yellow">Do you want to climb down cliff or go back to the spring?</h4>
+
+        <!--Buttons-->
+        <div class="center">
+            <a href="#" onclick="fall()"> <button> Climb Down </button> </a>
+        </div>
+
+        <div class="center">
+            <a id="exit" href="Spring.html"> <button> Exit </button> </a>
+        </div>
+        
+        <hr>
+
+        <div class="center">
+            <iframe src="pouch.html" id="pouch" height="101" width="62"> </iframe>
+        </div>
+
+        <script> //Script BEGINS
+            pouch.src += location.search;
+            exit.href += location.search;
+
+            function fall(){                             
+                document.body.innerHTML = (
+                    `<h1 class="center text-white ancient-font text-red">You Die!</h1>  
+                    <hr> 
+
+                    <p class="center">
+                        <img src="assets/fall.gif" width="480">
+                    </p>
+
+                    <h3 class="center text-white clean-font text-red"> Your foot slipped and that's all it took. </h3>
+
+                    <div class="center">
+                        <a href="index.html"> <button> Game Over </button> </a>
+                    </div>
+
+                    <hr>
+
+                    <audio autoplay>
+                        <source src="assets/fall-scream.mp3">
+                    </audio>`
+                );                                      
+            }
+        </script> <!--Script ENDS-->
+    </body>
+</html>

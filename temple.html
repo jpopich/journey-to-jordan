@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title> Adventure Story </title>
+        <link rel="icon" href="assets/rune.png" />
+        <link href="styles/styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@1,100&family=Redressed&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class="center text-white ancient-font text-yellow"> Temple </h1>
+        <hr>
+
+        <p class="center">
+            <img src="assets/temple.gif" width="720">
+        </p>
+
+        <p class="center text-white clean-font text-yellow"> At the top of the temple, there's a arch with red hieroglyphs and an arch with blue hieroglyphs. </p>
+        <p class="center text-white clean-font text-yellow"> You notice each arch has a missing piece. </p>
+
+        <h3 id="message" class="center text-white clean-font text-yellow"> Which arch do you choose to complete? </h3>
+
+        <div class="center">
+            <a> <button id="redButton" onclick="oneRedRune()" class="red-button.hover"> Place the red rune in the red arch </button> </a>
+        </div>
+
+        <div class="center"> 
+            <a> <button id="blueButton" onclick="oneBlueRune()"> Place the blue rune in the blue arch</button> </a>
+        </div> 
+
+        <div class="center"> 
+            <a id="exit" href="jungle.html"> <button> Exit </button></a>
+        </div> 
+
+        <hr>
+            
+        <div class="center">
+            <iframe src="pouch.html" id="pouch" height="101" width="62"> </iframe>
+        </div>
+        
+        <script>
+            pouch.src += location.search;
+            exit.href += location.search;
+
+            var queryString = new URLSearchParams(location.search); 
+            var redRune = +queryString.get("redRune");
+            var blueRune = +queryString.get("blueRune");
+
+            function oneRedRune(){
+                if(redRune >= 1){
+                    document.body.innerHTML = (
+                        `<h1 class="center text-orange">Wicked Reality</h1>
+                        <hr>
+                        <p class="center">
+                            <img src="assets/reality.gif" width="720">
+                        </p>
+
+                        <h3 class="center text-orange">You've chosen wicked reality, while it isn't comfortable, at least it's true.</h3>
+                        <h3 class="center text-orange">You've awaken from your slumber, and now your real story begins...</h3>
+                        <h3 class="center text-orange"> To be continued.. </h3>
+
+
+                        <div class="center"> 
+                            <a href="index.html"> <button> Start Over </button> </a>
+                        </div>
+                        <hr>`
+                    );
+                }
+                else if(redRune < 1){
+                    message.innerHTML = (
+                        `You don't have the missing piece for that arch!`
+                    );
+                }
+            }
+
+            function oneBlueRune(){
+                if(blueRune >= 1){
+                    document.body.innerHTML = (
+                        `<h1 class="center text-orange">Comfortable Ignorance</h1>
+
+                        <hr>
+                        <p class="center">
+                            <img src="assets/sunset.gif" width="720">
+                        </p>
+                        
+                        <h3 class="center text-orange">You've chosen comfortable ignorance, it may not be real, but atleast your toes are in the sand with a piña colada in your hand.</h3>
+                        <h3 class="center text-orange"> Continue on with your "life".. </h3>
+                        <h3 class="center text-orange"> To be continued.. </h3>
+
+                        <div class="center">
+                            <a href="index.html"> <button> Start Over </button> </a>
+                        </div>
+                        <hr>`
+                    );
+                }
+                else if(blueRune < 1){
+                    message.innerHTML = (
+                        `You don't have the missing piece for that arch!`
+                    );
+                }
+            }
+        </script>
+    </body>
+</html>

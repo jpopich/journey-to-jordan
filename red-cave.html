@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title> Adventure Story</title>
+        <link rel="icon" href="assets/rune.png">
+        <link href="styles/styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@1,100&family=Redressed&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class="center text-red ancient-font"> Red Cave </h1>
+        <hr>
+        <p class="center">
+            <img src="assets/red-cave.jpg" width="550">
+        </p>
+
+        <p class="center text-white clean-font text-red">Within the red cave, you find a red rune.</p>
+        <p class="center text-white clean-font text-red">The rune has an inscription on it that says "Wicked Reality"</p>
+
+        <!--Buttons-->
+        <div class="center">
+            <a> <button onclick="takeRedRune()"> Take Rune &#127540 </button> </a>
+        </div>
+
+        <div class="center">
+            <a id="exit" href="underwater.html"> <button> Exit </button> </a>
+        </div>
+
+        
+    
+        <hr>
+
+        <div class="center">
+            <iframe src="pouch.html" id="pouch" height="101" width="62"> </iframe>
+        </div>
+        
+        
+        <script>
+            pouch.src += location.search;
+            exit.href += location.search;
+            
+            var queryString = new URLSearchParams(location.search); 
+            var redRune = +queryString.get("redRune");
+            
+            function takeRedRune(){                
+                if (redRune <= 0 ){                       
+                    queryString.set('redRune', redRune+1);   
+                    location.search = queryString;
+                }
+                else{
+                    queryString.set('redRune', redRune+0);  
+                    location.search = queryString;
+                }
+            }
+        </script>
+    </body>
+</html>

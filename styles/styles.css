@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(50,50,50)
+}
+
+.text-white{
+    color: white;
+}
+.text-red{
+    color: rgb(255,50,50);
+}
+.text-orange{
+    color: rgb(255,150,0);
+}
+.text-yellow{
+    color: rgb(255,255,50);
+}
+.text-green{
+    color: rgb(0,200,0)
+}
+.text-blue{
+    color: rgb(0,200,255);
+}
+
+.ancient-font{
+    font-family: 'Redressed', cursive;
+}
+.clean-font{
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+#redButton:hover{
+    background-color: red;
+    color: white;
+}
+
+#blueButton:hover{
+    background-color: blue;
+    color: white;
+}
